@@ -1,1 +1,195 @@
 // Normally mainpage styles
+.main
+	.main__slider
+		.slider
+			img
+				display: inline-block
+				vertical-align: top
+				width: 100% 
+			.slick-list
+				overflow: hidden
+			.slick-dots
+				margin-top: 15px
+				text-align: center
+				font-size: 0
+				li
+					display: inline-block
+					vertical-align: top
+					button
+						width: 10px
+						height: 10px
+						margin: 0 10px
+						-webkit-border-radius: 50%
+						border-radius: 50%
+						background: #CCC
+						font-size: 0
+					&.slick-active
+						button
+							background: #DCAD5C 
+	.main__inner
+		padding: 50px 0
+		text-align: center
+		border-bottom: 2px solid #edeef0 
+		&:last-child
+			border: none
+	.main__text
+		display: block
+		width: percentage(645/970)
+		margin: 10px auto 70px
+		text-align: justify
+		p
+			text-transform: uppercase
+			font-size: 18px
+			line-height: 2
+			color: #23292c
+			+circe-reg
+	.main__close
+		display: inline-block
+		vertical-align: top
+		+s(close)
+
+
+.flts
+	padding: 50px 0
+	border-bottom: 1px solid #2c363d
+	+clr
+	> ul
+		float: left
+		width: percentage(728/970)
+		margin: 0 30px
+		+justify
+		> li
+			position: relative
+			display: inline-block
+			vertical-align: middle
+			width: 20%
+			text-transform: uppercase
+			color: #23292c
+			font-size: 12px
+			+circe-bold
+			&:before
+				content: ""
+				position: absolute
+				top: 50%
+				left: 0
+				width: 3px
+				height: 3px
+				background: #23292c 
+				-webkit-border-radius: 50% 
+				border-radius: 50%  
+			&:first-child
+				&:before
+					display: none
+	.flts__search
+		float: right
+		margin: 40px 45px
+		a
+			display: block
+			span
+				display: block
+				+s(search)
+				
+.select
+	position: relative
+	display: inline-block
+	vertical-align: middle
+	width: 96%
+	padding: 40px 0
+	margin: 0 1% 0 3%
+	cursor: pointer
+	font-size: 12px
+	text-align: center
+	select
+		width: 0
+		opacity: 0
+	&.is-active
+		background: #2C363D 
+		color: #e6e8e9
+.select__close
+	display: none
+	position: absolute
+	top: -16px
+	left: -16px
+	+s(close)
+	&.is-active
+		display: block
+.select__text
+	position: relative
+	white-space: nowrap
+	overflow: hidden
+	text-overflow: ellipsis
+	&.is-active
+		text-transform: none
+		color: #d7ae60
+		font-size: 18px
+		+p-serif-ital
+.select__list
+	position: absolute
+	display: none
+	left: 0
+	right: 0
+	top: 70%
+	z-index: 99999
+	padding-bottom: 15px
+	overflow-x: hidden
+	overflow-y: auto
+	background: #2C363D 
+	text-transform: none
+	color: #9ea5a9
+	font-size: 16px
+	+p-serif-ital
+	li
+		padding: 15px 0 
+		cursor: pointer
+		line-height: 1
+		&:hover
+			color: #e6e8e9 
+			
+.product
+	padding: 30px 0 10px
+	font-size: 0
+	.product__item
+		position: relative
+		display: inline-block
+		vertical-align: top
+		width: 160px
+		margin: 0 80px 10px
+		text-align: center
+		img
+			margin-bottom: 30px
+		p
+			padding-bottom: 30px
+			color: #23292c
+			font-size: 14px
+			+circe-reg
+	.product__hover
+		display: none
+		position: absolute
+		top: 35px
+		left: 0
+		right: 0
+		padding: 0 20px
+		text-align: center
+		text-decoration: underline
+		color: #c7a056
+		font-size: 16px
+		+p-slab-ital
+		
+		
+.catalog
+	.product__item
+		&:hover
+			margin: -1px 80px 9px
+			border: 1px solid #cc9f52 
+			img
+				opacity: 0
+			p
+				color: #c7a056
+			.product__hover
+				display: block
+
+.contacts
+	.contacts__top
+		padding: 95px 155px
+		background: url("../img/contacts-bg.jpg")
+		+cover

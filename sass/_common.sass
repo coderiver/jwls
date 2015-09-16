@@ -48,119 +48,77 @@
 // 	+jpg(bla)
 
 
++font(circe-bold, circe-bold)
+=circe-bold
+	font-family: circe-bold, sans-serif
++font(circe-regular, circe-regular)
+=circe-reg
+	font-family: circe-regular, sans-serif 
++font(FuturaStdCondensedLightObl, FuturaStdCondensedLightObl)
+=futura-light
+	font-family: FuturaStdCondensedLightObl, sans-serif
++font(FuturaStdHeavy, FuturaStdHeavy) 
+=futura-heavy
+	font-family: FuturaStdHeavy, sans-serif
++font(PermianSerifBold, PermianSerifBold)
+=p-serif-bold
+	font-family: PermianSerifBold, serif 
++font(PermianSerifItalic, PermianSerifItalic)
+=p-serif-ital
+	font-family: PermianSerifItalic, serif 
++font(PermianSlabItalic, PermianSlabItalic)
+=p-slab-ital
+	font-family: PermianSlabItalic, sans-serif
++font(PermianSlabRegular,PermianSlabRegular)
+=p-slab-reg
+	font-family: PermianSlabRegular, sans-serif 
+
+
 body
 	font-family: Arial, sans-serif 
 	font-size: 12px 
 	line-height: 1.4
-
-
-// common blocks      
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	
+a
+	text-decoration: none
+
+
+// common blocks    
+
+.out
+	min-width: 970px
+	
+.h3
+	text-transform: uppercase
+	color: #23292c
+	font-size: 12px
+	+p-serif-bold
+.h4
+	display: inline-block
+	vertical-align: top
+	margin: 20px 0
+	font-size: 16px
+	color: #23292c
+	+p-slab-ital
+
+.logo
+	display: inline-block
+	vertical-align: top
+	margin: 0 80px
+	text-transform: uppercase
+	color: #23292c
+	font-size: 36px
+	font-weight: 300
+	+futura-light
+
+.btn
+	display: inline-block
+	vertical-align: top
+	padding: 19px 40px 15px
+	text-transform: uppercase
+	font-size: 12px
+	color: #FFF
+	text-align: center
+	+circe-bold 
+	&.btn_grey
+		background: #22292C 

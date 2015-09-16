@@ -1,0 +1,57 @@
+// header
+.header
+	padding: 35px 0 10px
+	+clr
+	.header__left
+		float: left
+		font-size: 0
+		margin-top: 40px
+	.header__catalog
+		position: relative
+		display: inline-block
+		vertical-align: top
+		margin-top: 10px
+		padding-left: 50px
+		text-transform: uppercase
+		color: #2d363d
+		font-size: 12px
+		font-weight: 700
+		+circe-bold
+		&:before
+			content: ""
+			position: absolute
+			top: 2px
+			left: 0
+			+s(catalog) 
+	.header__right
+		float: right
+	.header__phone
+		display: inline-block
+		vertical-align: top
+		margin: 40px 45px 0 0
+		text-transform: uppercase
+		color: #23292c
+		font-size: 36px
+		font-weight: 300
+		+futura-light
+	.header__basket
+		display: inline-block
+		vertical-align: top
+		padding: 45px 30px
+		background: #2C363D
+		span
+			position: relative
+			display: inline-block
+			vertical-align: middle
+			padding-left: 35px
+			text-transform: uppercase
+			color: #FFF 
+			font-size: 18px
+			font-weight: 300
+			+futura-light
+			&:before
+				content: ""
+				position: absolute
+				top: -6px
+				left: 0
+				+s(basket)
