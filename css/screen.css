@@ -168,7 +168,11 @@ a { text-decoration: none; }
 .delivery .delivery__field .select_order { width: 100%; }
 .delivery .delivery__btn { width: 100%; margin: 40px 0 80px; padding: 25px 25px 23px; background: #80929E; text-transform: uppercase; color: #FFF; font-size: 12px; font-family: circe-bold, sans-serif; }
 
-.product .slider .slick-list { overflow: visible; }
+.product .main__slider { overflow: hidden; }
+.product .main__slider .slider { width: 740px; margin: 0 auto; }
+.product .main__slider .slider img { opacity: 0.2; }
+.product .main__slider .slider img.slick-active { opacity: 1; }
+.product .main__slider .slider .slick-list { overflow: visible; }
 .product .h3 { padding-bottom: 40px; }
 
 .header { padding: 35px 0 0; *zoom: 1; }

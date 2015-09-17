@@ -406,9 +406,17 @@
 
 
 .product
-	.slider
-		.slick-list
-			overflow: visible
+	.main__slider
+		overflow: hidden
+		.slider
+			width: 740px
+			margin: 0 auto
+			img
+				opacity: 0.2
+				&.slick-active
+					opacity: 1
+			.slick-list
+				overflow: visible
 	.h3
 		padding-bottom: 40px
 		        
