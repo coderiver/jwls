@@ -163,9 +163,7 @@
 			<div class="contacts__phone">
 				<p>+7 (495) 795 5334,  8 800 775 5972</p>
 			</div>
-			<div class="contacts__map">
-				map
-			</div>
+			<div class="contacts__map" id="contacts-map"></div>
 			<div class="contacts__adress">
 				<p>МОСКВА, ВЕТОШНЫЙ ПЕРЕУЛОК, ДОМ 9, <br>ТЦ “НИКОЛЬСКИЙ ПАССАЖ”</p>
 			</div>
@@ -209,6 +207,24 @@
 </footer>
 <!-- END footer -->
 <!-- load scripts -->
+<script>
+
+	function initMap() {
+	  var myLatLng = {lat: 55.755334, lng: 37.622230};
+
+	  var map = new google.maps.Map(document.getElementById('contacts-map'), {
+	    zoom: 15,
+	    center: myLatLng
+	  });
+
+	  var marker = new google.maps.Marker({
+	    position: myLatLng,
+	    map: map
+	  });
+	}
+
+</script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?v=3.exp&callback=initMap"></script>
 <script src="js/lib/head.js" data-headjs-load="js/init.js"></script>
 </body>
 </html>

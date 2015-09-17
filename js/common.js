@@ -63,4 +63,12 @@ head.ready(function() {
 		dots: true
 	});
 
+	$('.js-slider-product').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		arrows: true,
+		dots: false,
+		infinite: false
+	});
+
 });

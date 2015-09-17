@@ -79,11 +79,17 @@ body
 	font-size: 12px 
 	line-height: 1.4
 	
+
+// common blocks  
+  
 a
 	text-decoration: none
-
-
-// common blocks    
+	
+.link-gold
+	text-transform: none
+	text-decoration: underline
+	color: #c7a056
+	+p-slab-ital
 
 .out
 	min-width: 970px
@@ -93,6 +99,9 @@ a
 	color: #23292c
 	font-size: 12px
 	+p-serif-bold
+	.link-gold
+		margin-left: 5px
+		font-size: 18px
 .h4
 	display: inline-block
 	vertical-align: top
@@ -100,6 +109,13 @@ a
 	font-size: 16px
 	color: #23292c
 	+p-slab-ital
+.h5
+	text-transform: uppercase
+	letter-spacing: 3px 
+	color: #23292c
+	font-size: 10px
+	line-height: 2.4
+	+circe-bold
 
 .logo
 	display: inline-block
@@ -122,3 +138,10 @@ a
 	+circe-bold 
 	&.btn_grey
 		background: #22292C 
+		
+.line
+	display: block
+	margin: 0 auto 100px
+	width: 80px
+	height: 2px
+	background-color: #23292c
