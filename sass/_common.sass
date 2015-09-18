@@ -145,3 +145,28 @@ a
 	width: 80px
 	height: 2px
 	background-color: #23292c
+	&.line_l
+		width: 220px
+	
+.breadcrumbs
+	a
+		position: relative
+		display: inline-block
+		vertical-align: middle
+		padding-left: 30px
+		text-decoration: underline
+		color: #23292c
+		font-size: 14px
+		+circe-bold
+		&:before
+			content: "/"
+			display: block
+			position: absolute
+			top: 0
+			left: 13px
+		&:first-child
+			padding: 0
+			&:before
+				display: none
+		&:hover
+			color: #c7a056

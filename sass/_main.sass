@@ -372,6 +372,51 @@
 		font-size: 14px
 		li
 			padding: 5px 0 
+			
+.select_size
+	width: 100px
+	margin: 0
+	padding: 15px 10px
+	border: 2px solid #9ea5a9
+	background: #FFF 
+	text-align: left
+	text-transform: uppercase
+	color: #23292c
+	font-size: 12px
+	+circe-bold
+	&.is-active
+		background: #FFF
+		color: #23292c
+		.select__text:after
+			+rotate(180)
+	.select__text
+		display: block
+		margin-bottom: -20px
+		&:after
+			content: ""
+			position: absolute
+			right: 0
+			top: 3px
+			+s(arr-select)
+		&.is-active
+			text-transform: uppercase
+			color: #23292c
+			font-size: 12px
+			+circe-bold
+	.select__list
+		top: 100%
+		margin: -10px -2px 0
+		padding: 0 0px 5px
+		border: 2px solid #9ea5a9
+		border-top: none
+		background: #FFF
+		color: #23292c 
+		font-size: 12px
+		font-weight: bold
+		li
+			padding: 5px 10px
+			&:hover
+				background: #9ea5a9
 
 .delivery
 	.delivery__field
@@ -406,17 +451,147 @@
 
 
 .product
+	position: relative
+	.product__top
+		position: relative
+		padding: 90px 80px 0
+		border-bottom: 2px solid #edeef0
+		z-index: 99999
+	.product__title
+		padding: 30px 0
+		h2
+			color: #23292c
+			font-size: 24px
+			font-weight: normal
+			line-height: 2.5
+			+circe-reg
+	.product__prise
+		margin: 100px 0
+		.line
+			margin: 0 0 30px 0
+		p
+			color: #23292c
+			font-size: 24px
+			+circe-reg
+	.product__size
+		margin: 30px 0
+		font-size: 0s
+		p
+			display: inline-block
+			vertical-align: middle
+			padding-right: 70px
+			text-transform: uppercase
+			color: #23292c
+			font-size: 12px
+			line-height: 2.5
+			+circe-bold
+	.product__bottom
+		+clr
+	.product__btn
+		float: left
+		display: block
+		width: 220px
+		height: 50px
+		padding: 21px 0 20px
+		background: #2C363D 
+		text-align: center
+		text-transform: uppercase
+		color: #FFF
+		font-size: 12px
+		+circe-bold
+	.product__preview
+		float: right
+		font-size: 0
+		a
+			display: inline-block
+			vertical-align: top
+			margin: 0 18px -2px 18px
+			img
+				padding-bottom: 50px
+			&.is-active
+				border-bottom: 2px solid #DCAD5C 
 	.main__slider
+		position: absolute
+		top: -150px
+		left: 0
+		right: 0
 		overflow: hidden
 		.slider
+			position: relative
 			width: 740px
 			margin: 0 auto
+			padding: 50px 0
 			img
 				opacity: 0.2
 				&.slick-active
 					opacity: 1
 			.slick-list
 				overflow: visible
+			.slick-prev, .slick-next
+				position: absolute
+				left: 45%
+				font-size: 0
+				background: transparent 
+				z-index: 99999
+			.slick-prev
+				top: 0
+				+s(prev)
+				&.slick-disabled
+					cursor: default
+					+s(prev-d)
+			.slick-next
+				bottom: 0
+				+s(next)
+				&.slick-disabled
+					cursor: default
+					+s(next-d)
+	.product__wrap
+		padding: 0 80px
+		+clr
+	.product__text
+		float: left
+		width: 65% 
+		text-align: left
+		span
+			display: block
+			width: 61px
+			height: 61px
+			margin-bottom: 45px
+			border: 2px solid #c7a056 
+			-webkit-border-radius: 50% 
+			border-radius: 50% 
+			+vertical
+			i
+				display: inline-block
+				vertical-align: middle
+				+s(i)
+		p
+			display: block
+			margin-left: 80px
+			color: #23292c
+			font-size: 16px
+			+circe-reg
+	.product__info
+		float: right
+		display: table
+		width: 25% 
+		padding: 70px 20px
+		.row
+			display: table-row
+		.cell
+			display: table-cell
+	.product__left
+		float: left
+		&.cell
+			color: #82929e
+			font-size: 14px
+			+circe-reg
+	.product__right
+		float: right
+		&.cell
+			color: #23292c
+			font-size: 14px
+			+circe-reg
 	.h3
 		padding-bottom: 40px
 		        
