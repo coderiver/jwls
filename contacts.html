@@ -33,8 +33,8 @@
 			<ul>
 				<li>
 					<div class="select js-select">
-						<div class="select__close js-select-close"></div>
-					    <span class="select__text js-select-text">тип</span>
+						<div class="select__reset js-select-reset"></div>
+					    <span class="select__text js-select-text" data-placeholder="тип">тип</span>
 					    <ul class="select__list js-select-list">
 					        <li data-val="var0">var0</li>
 					        <li data-val="var1">var1</li>
@@ -51,8 +51,8 @@
 				</li>
 				<li>
 					<div class="select js-select">
-						<div class="select__close js-select-close"></div>
-					    <span class="select__text js-select-text">изделия</span>
+						<div class="select__reset js-select-reset"></div>
+					    <span class="select__text js-select-text" data-placeholder="изделия">изделия</span>
 					    <ul class="select__list js-select-list">
 					        <li data-val="var0">var0</li>
 					        <li data-val="var1">var1</li>
@@ -69,8 +69,8 @@
 				</li>
 				<li>
 					<div class="select js-select">
-						<div class="select__close js-select-close"></div>
-					    <span class="select__text js-select-text">Камень</span>
+						<div class="select__reset js-select-reset"></div>
+					    <span class="select__text js-select-text" data-placeholder="Камень">Камень</span>
 					    <ul class="select__list js-select-list">
 					        <li data-val="var0">изумруд</li>
 					        <li data-val="var1">var1</li>
@@ -87,8 +87,8 @@
 				</li>
 				<li>
 					<div class="select js-select">
-						<div class="select__close js-select-close"></div>
-					    <span class="select__text js-select-text">вставка</span>
+						<div class="select__reset js-select-reset"></div>
+					    <span class="select__text js-select-text" data-placeholder="вставка">вставка</span>
 					    <ul class="select__list js-select-list">
 					        <li data-val="var0">бриллиант</li>
 					        <li data-val="var1">изумруд</li>
@@ -109,8 +109,8 @@
 				</li>
 				<li>
 					<div class="select js-select">
-						<div class="select__close js-select-close"></div>
-					    <span class="select__text js-select-text">категория</span>
+						<div class="select__reset js-select-reset"></div>
+					    <span class="select__text js-select-text" data-placeholder="категория">категория</span>
 					    <ul class="select__list js-select-list">
 					        <li data-val="var0">var0</li>
 					        <li data-val="var1">var1</li>
@@ -125,10 +125,12 @@
 					    </select>
 					</div>
 				</li>
+				<li>
+					<div class="flts__search">
+						<a href="#"><span></span></a>
+					</div>
+				</li>
 			</ul>
-			<div class="flts__search">
-				<a href="#"><span></span></a>
-			</div>
 		</div>
 		<div class="contacts__top">
 			<span>The best players</span>
@@ -214,6 +216,7 @@
 
 	  var map = new google.maps.Map(document.getElementById('contacts-map'), {
 	    zoom: 15,
+	    scrollwheel: false,
 	    center: myLatLng
 	  });
 

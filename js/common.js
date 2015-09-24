@@ -20,7 +20,6 @@ head.ready(function() {
 	        }
 	        else {
 	            $(".js-select").removeClass("is-active");
-	            $(".js-select-close").removeClass("is-active");
 	            select.find(".js-select-close").toggleClass("is-active");
 	            $(".js-select-list").slideUp(100);
 	            select.toggleClass("is-active").find(".js-select-list").slideToggle(100);
@@ -34,7 +33,7 @@ head.ready(function() {
 	        var text = $(this).text();
 	        var select = $(this).parents(".js-select");
 	        var selectList = $(this).parents(".js-select-list");
-	        select.find(".js-select-close").removeClass("is-active");
+	        select.find(".js-select-reset").addClass("is-active");
 	        select.find(".js-select-text").text(text);
 	        select.find("option").removeAttr("selected");
 	        select.find('option[value="'+val+'"]').attr("selected", "selected");
@@ -47,10 +46,13 @@ head.ready(function() {
 	        
 	    });
 
-	    $(".js-select-close").click(function() {
-	    	$(this).removeClass("is-active");
-	    	$(this).parents(".js-select").removeClass("is-active");
-	    	$(this).siblings(".js-select-list").slideUp(100);
+	    $('.js-select-reset').click(function() {
+	    	var placeholder = $(this).closest('.js-select').find('.js-select-text').data('placeholder');
+	    	var select = $(this).closest(".js-select");
+	    	select.find("option").removeAttr("selected");
+	    	$(this).closest('.js-select').find('.js-select-text').text(placeholder);
+	    	$(this).siblings('.js-select-text').removeClass('is-active');
+	    	$(this).removeClass('is-active');
 	    });
 	  
 	});

@@ -5,9 +5,10 @@
 			img
 				display: inline-block
 				vertical-align: top
-				width: 100% 
 			.slick-list
 				overflow: hidden
+			.slick-track
+				height: 400px
 			.slick-dots
 				margin-top: 15px
 				text-align: center
@@ -36,7 +37,7 @@
 		display: block
 		width: percentage(645/970)
 		margin: 10px auto 70px
-		text-align: justify
+		text-align: center
 		p
 			text-transform: uppercase
 			font-size: 18px
@@ -62,7 +63,7 @@
 			position: relative
 			display: inline-block
 			vertical-align: middle
-			width: 20%
+			width: 16.6%
 			text-transform: uppercase
 			color: #23292c
 			font-size: 12px
@@ -81,21 +82,20 @@
 				&:before
 					display: none
 	.flts__search
-		float: right
-		margin: 40px 45px
 		a
 			display: block
 			span
 				display: block
+				margin: 0 auto
 				+s(search)
 				
 .select
 	position: relative
 	display: inline-block
 	vertical-align: middle
-	width: 96%
+	width: 95%
 	padding: 40px 0
-	margin: 0 1% 0 3%
+	margin: 0 1% 0 4%
 	cursor: pointer
 	font-size: 12px
 	text-align: center
@@ -105,11 +105,11 @@
 	&.is-active
 		background: #2C363D 
 		color: #e6e8e9
-.select__close
+.select__reset
 	display: none
 	position: absolute
 	top: -16px
-	left: -16px
+	left: 45%
 	+s(close)
 	&.is-active
 		display: block
@@ -156,7 +156,7 @@
 		margin: 0 80px 10px
 		text-align: center
 		img
-			margin-bottom: 30px
+			padding-bottom: 30px
 		p
 			padding-bottom: 30px
 			color: #23292c
@@ -244,6 +244,7 @@
 			color: #23292c
 			font-size: 12px
 			line-height: 2
+			letter-spacing: 1.5px
 			+circe-bold
 	.contacts__mail
 		padding: 200px 0
@@ -269,10 +270,10 @@
 		height: 100%
 		&.order
 			width: 49.9%
-			padding: 70px 30px 70px 80px
+			padding: 70px 40px 70px 80px
 			background: #273035
 		&.delivery
-			padding: 70px 80px 70px 30px
+			padding: 70px 100px 70px 40px
 			background: #2C363D
 	.basket__title
 		display: block
@@ -280,11 +281,13 @@
 		color: #FFF 
 		p
 			text-transform: uppercase
+			letter-spacing: 3px
 			font-size: 17px
 			+circe-bold
 			i
 				text-transform: none
 				font-size: 24px
+				font-style: normal
 				+p-serif-ital
 
 .order
@@ -307,8 +310,7 @@
 		font-size: 0
 	.order__text
 		position: relative
-		float: left
-		max-width: 190px
+		overflow: visible
 		min-height: 130px
 		padding-bottom: 25px
 	.order__title
@@ -317,7 +319,7 @@
 		+p-slab-ital
 	.order__bottom
 		position: absolute
-		left: 0
+		left: 180px
 		right: 0
 		bottom: 0
 		+clr
@@ -367,16 +369,16 @@
 			+circe-bold
 	.select__list
 		top: 100%
-		margin-top: -10px
+		margin-top: -5px
 		padding: 0 10px 10px
 		font-size: 14px
 		li
-			padding: 5px 0 
+			padding: 10px 0 
 			
 .select_size
 	width: 100px
 	margin: 0
-	padding: 15px 10px
+	padding: 11px 10px
 	border: 2px solid #9ea5a9
 	background: #FFF 
 	text-align: left
@@ -406,21 +408,21 @@
 	.select__list
 		top: 100%
 		margin: -10px -2px 0
-		padding: 0 0px 5px
+		padding: 10px 0px 5px
 		border: 2px solid #9ea5a9
 		border-top: none
 		background: #FFF
 		color: #23292c 
 		font-size: 12px
 		font-weight: bold
+		+circe-bold
 		li
-			padding: 5px 10px
+			padding: 10px
 			&:hover
 				background: #9ea5a9
 
 .delivery
 	.delivery__field
-		padding: 0 10px
 		input
 			width: 100%
 			padding: 20px 10px
@@ -433,6 +435,11 @@
 				font-size: 10px
 				+circe-bold
 			&:focus
+				border-bottom-color: #FFF
+				color: #FFF
+				+placeholder
+					color: #FFF 
+			&.is-error
 				border-bottom-color: #ff4a4a 
 				color: #ff4a4a
 				+placeholder
@@ -445,6 +452,7 @@
 		padding: 25px 25px 23px
 		background: #80929E
 		text-transform: uppercase
+		letter-spacing: 2px
 		color: #FFF   
 		font-size: 12px
 		+circe-bold
@@ -498,6 +506,7 @@
 		text-transform: uppercase
 		color: #FFF
 		font-size: 12px
+		letter-spacing: 2px
 		+circe-bold
 	.product__preview
 		float: right
