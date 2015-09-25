@@ -460,21 +460,54 @@
 
 .product
 	position: relative
+	.product__link
+		display: block
+		position: fixed
+		left: 50%
+		z-index: 999999
+		&.top
+			top: 0
+			cursor: default
+			+s(prev-d)
+			&.is-active
+				cursor: pointer
+				+s(prev)
+		&.bottom
+			bottom: 0
+			cursor: default
+			+s(next-d)
+			&.is-active
+				cursor: pointer
+				+s(next)
 	.product__top
 		position: relative
-		padding: 90px 80px 0
 		border-bottom: 2px solid #edeef0
-		z-index: 99999
+		> .product__left, .product__right
+			position: absolute
+			top: 150px
+			z-index: 999
+			+clr
+		> .product__left
+			left: 80px
+		> .product__right
+			right: 100px
 	.product__title
-		padding: 30px 0
+		display: block
 		h2
+			display: block
 			color: #23292c
 			font-size: 24px
 			font-weight: normal
 			line-height: 2.5
 			+circe-reg
+	.product__social
+		display: block
+		margin: 20px 0
+		a
+			display: block
+			font-size: 0
 	.product__prise
-		margin: 100px 0
+		margin: 80px 0 0
 		.line
 			margin: 0 0 30px 0
 		p
@@ -482,8 +515,9 @@
 			font-size: 24px
 			+circe-reg
 	.product__size
-		margin: 30px 0
-		font-size: 0s
+		display: block
+		margin: 10px 0 30px
+		font-size: 0
 		p
 			display: inline-block
 			vertical-align: middle
@@ -493,10 +527,7 @@
 			font-size: 12px
 			line-height: 2.5
 			+circe-bold
-	.product__bottom
-		+clr
 	.product__btn
-		float: left
 		display: block
 		width: 220px
 		height: 50px
@@ -508,52 +539,34 @@
 		font-size: 12px
 		letter-spacing: 2px
 		+circe-bold
-	.product__preview
-		float: right
-		font-size: 0
-		a
-			display: inline-block
-			vertical-align: top
-			margin: 0 18px -2px 18px
-			img
-				padding-bottom: 50px
-			&.is-active
-				border-bottom: 2px solid #DCAD5C 
 	.main__slider
-		position: absolute
-		top: -150px
-		left: 0
-		right: 0
 		overflow: hidden
-		.slider
+		margin-bottom: -2px
+		padding-bottom: 2px
+		+clr
+		.slider-for
 			position: relative
 			width: 740px
-			margin: 0 auto
-			padding: 50px 0
+			margin: -150px auto 0
+			padding: 50px 0 0
 			img
 				opacity: 0.2
 				&.slick-active
 					opacity: 1
 			.slick-list
 				overflow: visible
-			.slick-prev, .slick-next
-				position: absolute
-				left: 45%
-				font-size: 0
-				background: transparent 
-				z-index: 99999
-			.slick-prev
-				top: 0
-				+s(prev)
-				&.slick-disabled
-					cursor: default
-					+s(prev-d)
-			.slick-next
-				bottom: 0
-				+s(next)
-				&.slick-disabled
-					cursor: default
-					+s(next-d)
+		.slider-nav
+			float: right
+			padding: 0 118px 0 100px
+			.slick-list
+				overflow: visible
+			.slide
+				margin: 0 18px -2px 18px
+				padding-bottom: 50px
+				&.slick-active
+					border-bottom: 2px solid #DCAD5C 
+				img
+					width: 50px
 	.product__wrap
 		padding: 0 80px
 		+clr

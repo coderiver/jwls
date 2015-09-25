@@ -65,12 +65,21 @@ head.ready(function() {
 		dots: true
 	});
 
-	$('.js-slider-product').slick({
+	$('.slider-for').slick({
 		slidesToShow: 1,
 		slidesToScroll: 1,
-		arrows: true,
+		arrows: false,
 		dots: false,
-		infinite: false
+		asNavFor: '.slider-nav'
+	});
+	$('.slider-nav').slick({
+		slidesToShow: 4,
+		slidesToScroll: 1,
+		dots: false,
+		arrows: false,
+		centerMode: true,
+		focusOnSelect: true,
+		asNavFor: '.slider-for'
 	});
 
 });

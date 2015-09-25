@@ -154,24 +154,28 @@ a
 		width: 220px
 	
 .breadcrumbs
-	a
+	display: block
+	padding: 90px 100px 40px 80px
+	span
 		position: relative
 		display: inline-block
 		vertical-align: middle
 		padding-left: 30px
-		text-decoration: underline
-		color: #23292c
-		font-size: 14px
-		+circe-bold
 		&:before
 			content: "/"
 			display: block
 			position: absolute
-			top: 0
+			top: 2px
 			left: 13px
 		&:first-child
 			padding: 0
 			&:before
 				display: none
-		&:hover
-			color: #c7a056
+		a
+			display: block
+			text-decoration: underline
+			color: #23292c
+			font-size: 14px
+			+circe-bold
+			&:hover
+				color: #c7a056
