@@ -481,7 +481,6 @@
 				+s(next)
 	.product__top
 		position: relative
-		border-bottom: 2px solid #edeef0
 		> .product__left, .product__right
 			position: absolute
 			top: 150px
@@ -540,6 +539,7 @@
 		letter-spacing: 2px
 		+circe-bold
 	.main__slider
+		position: relative
 		overflow: hidden
 		margin-bottom: -2px
 		padding-bottom: 2px
@@ -547,22 +547,46 @@
 		.slider-for
 			position: relative
 			width: 740px
-			margin: -150px auto 0
-			padding: 50px 0 0
-			img
-				opacity: 0.2
+			height: 700px
+			margin: 0 auto
+			.slide
+				img
+					width: auto
+					height: 700px 
+					margin: 0 auto
+					opacity: 0.2
+					+tr(opacity 1000ms)
 				&.slick-active
-					opacity: 1
+					img
+						opacity: 1
 			.slick-list
 				overflow: visible
+		.slider-nav-wrap
+			+rh(629)
+				position: absolute
+				top: 400px
+				right: 0
+				left: 0		
 		.slider-nav
-			float: right
+			width: 100% 
+			border-bottom: 2px solid #edeef0
 			padding: 0 118px 0 100px
+			+clr
+			+rh(629)
+				&.is-fixed
+					position: fixed
+					bottom: 1px
+					top: auto
+					right: 0
+				&.is-bottom
+					top: auto
+					bottom: -150px	
 			.slick-list
+				float: right
 				overflow: visible
 			.slide
 				margin: 0 18px -2px 18px
-				padding-bottom: 50px
+				padding: 50px 0
 				&.slick-active
 					border-bottom: 2px solid #DCAD5C 
 				img
@@ -597,7 +621,7 @@
 		float: right
 		display: table
 		width: 25% 
-		padding: 70px 20px
+		padding: 30px 20px
 		.row
 			display: table-row
 		.cell

@@ -1,6 +1,5 @@
 head.ready(function() {
 
-	$(document).ready(function() {
 	    $(document).click(function() {
 	        $(".js-select").removeClass("is-active");
 		    $(".js-select-close").removeClass("is-active");
@@ -55,7 +54,6 @@ head.ready(function() {
 	    	$(this).removeClass('is-active');
 	    });
 	  
-	});
 
 	$('.js-slider-main').slick({
 		slidesToShow: 1,
@@ -72,6 +70,9 @@ head.ready(function() {
 		dots: false,
 		asNavFor: '.slider-nav'
 	});
+	$('.js-slide-for').click(function() {
+		$('.slider-for').slick('slickNext');
+	});
 	$('.slider-nav').slick({
 		slidesToShow: 4,
 		slidesToScroll: 1,
@@ -80,6 +81,47 @@ head.ready(function() {
 		centerMode: true,
 		focusOnSelect: true,
 		asNavFor: '.slider-for'
+	});
+
+
+	function stickyNav(){
+		if ($(window).height() < 630) {
+			var scroll = $(window).scrollTop(),
+				windowHeight = $(window).height(),
+				nav = $('.js-sticky'),
+				trigger = $('.main__slider'),
+				triggerPos = trigger.offset().top,
+				height = trigger.outerHeight(),
+				navPos = $('.slider-nav-wrap').offset().top,
+				navHeight = nav.outerHeight(),
+				startfixed = navPos + navHeight - windowHeight,
+				stopfixed = triggerPos + height - windowHeight;
+			
+			if (scroll >= stopfixed){
+				nav.removeClass('is-fixed');
+				nav.addClass('is-bottom');
+			} 
+			else {
+				if (scroll >= startfixed) {
+					nav.addClass('is-fixed');
+					nav.removeClass('is-bottom');
+				}
+				else {
+					if (scroll < startfixed){
+						nav.removeClass('is-fixed');
+					}
+					else {
+						nav.addClass('is-fixed');
+						nav.removeClass('is-bottom');
+					}
+				}
+			}
+		}
+	}
+	stickyNav();
+
+	$(window).scroll(function(){
+		stickyNav();
 	});
 
 });
