@@ -63,29 +63,39 @@ head.ready(function() {
 		dots: true
 	});
 
+	var lenth = $('.js-slide-for').length;
+
 	$('.slider-for').slick({
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		arrows: false,
-		dots: false,
 		asNavFor: '.slider-nav'
-	});
-	$('.js-slide-for').click(function() {
-		$('.slider-for').slick('slickNext');
-	});
+	})
 	$('.slider-nav').slick({
 		slidesToShow: 4,
 		slidesToScroll: 1,
-		dots: false,
+		asNavFor: '.slider-for',
 		arrows: false,
-		centerMode: true,
-		focusOnSelect: true,
-		asNavFor: '.slider-for'
+		focusOnSelect: true
 	});
 
 
+	$('.js-slide-for').click(function() {
+		var slideIndex = $(this).data('slick-index');
+
+		slideIndex = slideIndex + 1;
+
+		if (slideIndex == lenth){
+			$('.slider-for').slick('slickGoTo', 0);
+		} 
+		else {
+			$('.slider-for').slick('slickNext');
+			$('.slider-nav').slick('slickNext');
+		}
+	});
+
 	function stickyNav(){
-		if ($(window).height() < 630) {
+		if ($(window).height() < 1002) {
 			var scroll = $(window).scrollTop(),
 				windowHeight = $(window).height(),
 				nav = $('.js-sticky'),

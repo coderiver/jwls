@@ -2,6 +2,7 @@
 .main
 	.main__slider
 		.slider
+			padding-bottom: 20px
 			img
 				display: inline-block
 				vertical-align: top
@@ -555,14 +556,14 @@
 					height: 700px 
 					margin: 0 auto
 					opacity: 0.2
-					+tr(opacity 1000ms)
+					+tr(opacity 2000ms)
 				&.slick-active
 					img
 						opacity: 1
 			.slick-list
 				overflow: visible
 		.slider-nav-wrap
-			+rh(629)
+			+rh(1001)
 				position: absolute
 				top: 400px
 				right: 0
@@ -572,7 +573,7 @@
 			border-bottom: 2px solid #edeef0
 			padding: 0 118px 0 100px
 			+clr
-			+rh(629)
+			+rh(1001)
 				&.is-fixed
 					position: fixed
 					bottom: 1px
@@ -585,11 +586,14 @@
 				float: right
 				overflow: visible
 			.slide
+				text-align: center
 				margin: 0 18px -2px 18px
 				padding: 50px 0
-				&.slick-active
+				&.slick-current
 					border-bottom: 2px solid #DCAD5C 
 				img
+					display: inline-block
+					vertical-align: top
 					width: 50px
 	.product__wrap
 		padding: 0 80px
