@@ -48,30 +48,30 @@
 // 	+jpg(bla)
 
 
-+font(circe-bold, circe-bold)
++font("circe-bold", circe-bold)
 =circe-bold
-	font-family: circe-bold, sans-serif
-+font(circe-regular, circe-regular)
+	font-family: "circe-bold", sans-serif
++font("circe-regular", circe-regular)
 =circe-reg
-	font-family: circe-regular, sans-serif 
-+font(FuturaStdCondensedLightObl, FuturaStdCondensedLightObl)
+	font-family: "circe-regular", sans-serif 
++font("FuturaStdCondensedLightObl", FuturaStdCondensedLightObl)
 =futura-light
-	font-family: FuturaStdCondensedLightObl, sans-serif
-+font(FuturaStdHeavy, FuturaStdHeavy) 
+	font-family: "FuturaStdCondensedLightObl", sans-serif
++font("FuturaStdHeavy", FuturaStdHeavy) 
 =futura-heavy
-	font-family: FuturaStdHeavy, sans-serif
-+font(PermianSerifBold, PermianSerifBold)
+	font-family: "FuturaStdHeavy", sans-serif
++font("PermianSerifBold", PermianSerifBold)
 =p-serif-bold
-	font-family: PermianSerifBold, serif 
-+font(PermianSerifItalic, PermianSerifItalic)
+	font-family: "PermianSerifBold", serif 
++font("PermianSerifItalic", PermianSerifItalic)
 =p-serif-ital
-	font-family: PermianSerifItalic, serif 
-+font(PermianSlabItalic, PermianSlabItalic)
+	font-family: "PermianSerifItalic", serif 
++font("PermianSlabItalic", PermianSlabItalic)
 =p-slab-ital
-	font-family: PermianSlabItalic, sans-serif
-+font(PermianSlabRegular,PermianSlabRegular)
+	font-family: "PermianSlabItalic", sans-serif
++font("PermianSlabRegular",PermianSlabRegular)
 =p-slab-reg
-	font-family: PermianSlabRegular, sans-serif 
+	font-family: "PermianSlabRegular", sans-serif 
 
 
 body
@@ -142,7 +142,10 @@ a
 	text-align: center
 	+circe-bold 
 	&.btn_grey
-		background: #22292C 
+		background: #22292C
+	&.btn_back
+		padding-left: 13px
+		padding-right: 13px
 		
 .line
 	display: block
