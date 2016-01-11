@@ -257,7 +257,7 @@ a { text-decoration: none; }
 .order-process__numb { color: #23292c; font-size: 12px; font-family: "circe-bold", sans-serif; line-height: 1; text-transform: uppercase; letter-spacing: 0.1em; padding-top: 27px; }
 .order-process__numb span { color: #c7a056; }
 .order-process__txt { color: #7d8589; font-size: 16px; line-height: 24px; max-width: 520px; margin: 53px auto 0; font-family: "PermianSerifItalic", serif; }
-.order-process .btn { margin-top: 124px; }
+.order-process .btn { margin: 125px 0; }
 
 .slick-slider { position: relative; display: block; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; -ms-touch-action: pan-y; touch-action: pan-y; -webkit-tap-highlight-color: transparent; }
 
